@@ -1,0 +1,1961 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://cloudbus.org/resources/api"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://cloudbus.org/resources/api"
+     versionIRI="http://cloudbus.org/resources/api#0.1">
+    <Prefix name="" IRI="http://cloudbus.org/resources/api#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="oapi" IRI="http://vocabs.iai.uni-bonn.de/oapi#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="hydra" IRI="http://www.w3.org/ns/hydra/core#"/>
+    <Prefix name="vcard" IRI="http://www.w3.org/2006/vcard/ns#"/>
+    <Prefix name="schema" IRI="http://schema.org/"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ontology created to semantify Swagger 2.0 and RAML 1.0 specs</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Extended by CLouds Lab, University of Melbourne</Literal>
+    </Annotation>
+    <Declaration>
+        <DataProperty IRI="authorizationUrl"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="_operation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tags"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="default"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="version"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="namespace"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="examples"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="consumes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ContactObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RAMLObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="d_put"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="summary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SecuritySchemeObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="XmlObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="xml"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_operationType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PathsObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ParametersDefinitionsObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="minLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="parameterName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_domain"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="operationId"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="d_responsesDefault"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="itemsType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_securityReqName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="minimum"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="basePath"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ResponsesDefinitionsObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="schema:url"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_httpStatusCode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ResponseObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="maxItems"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="j_$ref"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="vcard:email"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="LicenseObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_scopeName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="discriminator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="pattern"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SecurityDefinitionsObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="operationParameters"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_pathItemName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="host"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="definitions"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_securityDefName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="info"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SecurityRequirementObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="InfoObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="schema"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ItemsObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="HeadersObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ExampleObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="collectionFormat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="produces"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="items"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="_schemaProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="flow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SchemaObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ExternalDocumentationObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="exclusiveMaximum"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="prefix"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="paths"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ParameterObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="hydra:required"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_mimeType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SwaggerObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="schemes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_headerName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="contact"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="tokenUrl"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="wrapped"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="maximum"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="attribute"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_responseName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="minItems"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="deprecated"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ResponsesObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ReferenceObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_requiredSchema"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="operationTags"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="externalDocs"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="operationResponses"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="securityType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="headers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="d_head"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="termsOfService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="securityDefinitions"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="path"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="scopes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="d_delete"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="uniqueItems"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="parameters"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="d_patch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TagObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="security"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="d_options"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_paramDefName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_tag"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="headerType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_ApiUrl"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="_definitionsName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_definitionName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OperationObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="HeaderObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ScopesObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="maxLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="format"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DefinitionsObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="skos:example"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PathItemObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="_propertyName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="exclusiveMinimum"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="swagger"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="multipleOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="XmlName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="enum"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="readOnly"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="responses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="d_get"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="d_post"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="allowEmptyValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="_operation"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="_definitionsName"/>
+        <Class IRI="DefinitionsObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="_operation"/>
+        <Class IRI="PathItemObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="contact"/>
+        <Class IRI="InfoObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="d_delete"/>
+        <Class IRI="PathItemObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="d_get"/>
+        <Class IRI="PathItemObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="d_head"/>
+        <Class IRI="PathItemObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="d_options"/>
+        <Class IRI="PathItemObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="d_patch"/>
+        <Class IRI="PathItemObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="d_post"/>
+        <Class IRI="PathItemObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="d_put"/>
+        <Class IRI="PathItemObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="d_responsesDefault"/>
+        <Class IRI="ResponsesObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="definitions"/>
+        <Class IRI="SwaggerObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="examples"/>
+        <Class IRI="ResponseObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="externalDocs"/>
+        <Class IRI="OperationObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="externalDocs"/>
+        <Class IRI="SchemaObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="externalDocs"/>
+        <Class IRI="SwaggerObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="externalDocs"/>
+        <Class IRI="TagObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="headers"/>
+        <Class IRI="ResponseObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="info"/>
+        <Class IRI="SwaggerObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="items"/>
+        <Class IRI="HeaderObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="items"/>
+        <Class IRI="ItemsObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="items"/>
+        <Class IRI="ParameterObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="license"/>
+        <Class IRI="InfoObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="operationParameters"/>
+        <Class IRI="OperationObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="operationParameters"/>
+        <Class IRI="PathItemObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="operationResponses"/>
+        <Class IRI="OperationObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="parameters"/>
+        <Class IRI="ItemsObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="parameters"/>
+        <Class IRI="ParameterObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="parameters"/>
+        <Class IRI="SwaggerObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="path"/>
+        <Class IRI="PathsObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="paths"/>
+        <Class IRI="SwaggerObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="responses"/>
+        <Class IRI="SwaggerObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="schema"/>
+        <Class IRI="ParameterObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="schema"/>
+        <Class IRI="ResponseObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="scopes"/>
+        <Class IRI="SecuritySchemeObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="security"/>
+        <Class IRI="OperationObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="security"/>
+        <Class IRI="SwaggerObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="securityDefinitions"/>
+        <Class IRI="SwaggerObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="tags"/>
+        <Class IRI="SwaggerObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="xml"/>
+        <Class IRI="SchemaObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="_definitionsName"/>
+        <Class IRI="SchemaObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="_operation"/>
+        <Class IRI="OperationObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="contact"/>
+        <Class IRI="ContactObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="d_responsesDefault"/>
+        <Class IRI="ReferenceObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="d_responsesDefault"/>
+        <Class IRI="ResponseObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="definitions"/>
+        <Class IRI="DefinitionsObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="examples"/>
+        <Class IRI="ExampleObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="externalDocs"/>
+        <Class IRI="ExternalDocumentationObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="headers"/>
+        <Class IRI="HeadersObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="info"/>
+        <Class IRI="InfoObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="items"/>
+        <Class IRI="ItemsObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="license"/>
+        <Class IRI="LicenseObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="operationParameters"/>
+        <Class IRI="ParameterObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="operationParameters"/>
+        <Class IRI="ReferenceObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="operationResponses"/>
+        <Class IRI="ResponsesObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="parameters"/>
+        <Class IRI="ParametersDefinitionsObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="path"/>
+        <Class IRI="PathItemObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="paths"/>
+        <Class IRI="PathsObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="responses"/>
+        <Class IRI="ResponsesDefinitionsObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="schema"/>
+        <Class IRI="SchemaObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="scopes"/>
+        <Class IRI="ScopesObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="security"/>
+        <Class IRI="SecurityRequirementObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="securityDefinitions"/>
+        <Class IRI="SecurityDefinitionsObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="tags"/>
+        <Class IRI="TagObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="xml"/>
+        <Class IRI="XmlObject"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="XmlName"/>
+        <Class IRI="XmlObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="_ApiUrl"/>
+        <Class IRI="SwaggerObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="_definitionName"/>
+        <Class IRI="DefinitionsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="_domain"/>
+        <Class IRI="SwaggerObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="_headerName"/>
+        <Class IRI="HeadersObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="_httpStatusCode"/>
+        <Class IRI="ResponseObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="_mimeType"/>
+        <Class IRI="ExampleObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="_paramDefName"/>
+        <Class IRI="ParametersDefinitionsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="_pathItemName"/>
+        <Class IRI="PathItemObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="_responseName"/>
+        <Class IRI="ResponsesDefinitionsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="_scopeName"/>
+        <Class IRI="ScopesObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="_securityDefName"/>
+        <Class IRI="SecurityDefinitionsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="_securityReqName"/>
+        <Class IRI="SecurityRequirementObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="_tag"/>
+        <Class IRI="SwaggerObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="allowEmptyValue"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="attribute"/>
+        <Class IRI="XmlObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="authorizationUrl"/>
+        <Class IRI="SecuritySchemeObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="basePath"/>
+        <Class IRI="SwaggerObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="collectionFormat"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="collectionFormat"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="collectionFormat"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="consumes"/>
+        <Class IRI="OperationObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="consumes"/>
+        <Class IRI="SwaggerObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="default"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="default"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="default"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="deprecated"/>
+        <Class IRI="OperationObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="discriminator"/>
+        <Class IRI="SchemaObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="enum"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="enum"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="enum"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="exclusiveMaximum"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="exclusiveMaximum"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="exclusiveMaximum"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="exclusiveMinimum"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="exclusiveMinimum"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="exclusiveMinimum"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="flow"/>
+        <Class IRI="SecuritySchemeObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="format"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="format"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="format"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="headerType"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="host"/>
+        <Class IRI="SwaggerObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="in"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="in"/>
+        <Class IRI="SecuritySchemeObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="itemsType"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="itemsType"/>
+        <Class IRI="SchemaObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="maxItems"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="maxItems"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="maxItems"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="maxLength"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="maxLength"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="maxLength"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="maximum"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="maximum"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="maximum"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="minItems"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="minItems"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="minItems"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="minLength"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="minLength"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="minLength"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="minimum"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="minimum"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="minimum"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="multipleOf"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="multipleOf"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="multipleOf"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="name"/>
+        <Class IRI="ContactObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="name"/>
+        <Class IRI="LicenseObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="name"/>
+        <Class IRI="SecuritySchemeObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="name"/>
+        <Class IRI="TagObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="namespace"/>
+        <Class IRI="XmlObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="operationId"/>
+        <Class IRI="OperationObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="operationTags"/>
+        <Class IRI="OperationObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="parameterName"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="pattern"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="pattern"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="pattern"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="prefix"/>
+        <Class IRI="XmlObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="produces"/>
+        <Class IRI="OperationObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="produces"/>
+        <Class IRI="SwaggerObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="readOnly"/>
+        <Class IRI="SchemaObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="schemes"/>
+        <Class IRI="OperationObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="schemes"/>
+        <Class IRI="SwaggerObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="securityType"/>
+        <Class IRI="SecuritySchemeObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="summary"/>
+        <Class IRI="OperationObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="swagger"/>
+        <Class IRI="SwaggerObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="termsOfService"/>
+        <Class IRI="InfoObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="tokenUrl"/>
+        <Class IRI="SecuritySchemeObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="type"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="type"/>
+        <Class IRI="SchemaObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="uniqueItems"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="uniqueItems"/>
+        <Class IRI="ItemsObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="uniqueItems"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="version"/>
+        <Class IRI="InfoObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="wrapped"/>
+        <Class IRI="XmlObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="j_$ref"/>
+        <Class IRI="PathItemObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="j_$ref"/>
+        <Class IRI="ReferenceObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/description"/>
+        <Class IRI="ExternalDocumentationObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/description"/>
+        <Class IRI="HeaderObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/description"/>
+        <Class IRI="InfoObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/description"/>
+        <Class IRI="OperationObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/description"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/description"/>
+        <Class IRI="ResponseObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/description"/>
+        <Class IRI="SecuritySchemeObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/description"/>
+        <Class IRI="TagObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/title"/>
+        <Class IRI="InfoObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:url"/>
+        <Class IRI="ContactObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:url"/>
+        <Class IRI="ExternalDocumentationObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="schema:url"/>
+        <Class IRI="LicenseObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="skos:example"/>
+        <Class IRI="ExampleObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="skos:example"/>
+        <Class IRI="SchemaObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="vcard:email"/>
+        <Class IRI="ContactObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="hydra:required"/>
+        <Class IRI="ParameterObject"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="XmlName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="_ApiUrl"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="_definitionName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="_domain"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="_headerName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="_httpStatusCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="_mimeType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="_operationType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="_paramDefName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="_pathItemName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="_responseName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="_scopeName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="_securityDefName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="_securityReqName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="_tag"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="allowEmptyValue"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="attribute"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="authorizationUrl"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="basePath"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="collectionFormat"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="consumes"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="deprecated"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="discriminator"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="exclusiveMaximum"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="exclusiveMinimum"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="flow"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="format"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="headerType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="host"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="in"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="itemsType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="maxItems"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="maxLength"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="maximum"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="minItems"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="minLength"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="minimum"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="multipleOf"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="namespace"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="operationId"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="operationTags"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="parameterName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="pattern"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="prefix"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="produces"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="readOnly"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="schemes"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="securityType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="summary"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="swagger"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="termsOfService"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="tokenUrl"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="type"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="uniqueItems"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="version"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="wrapped"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="j_$ref"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.org/dc/terms/description"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.org/dc/terms/title"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="schema:url"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="vcard:email"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="hydra:required"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ContactObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Contact information for the exposed API.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DefinitionsObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An object to hold data types that can be consumed and produced by operations. These data types can be primitives, arrays or models.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ExampleObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Allows sharing examples for operation responses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ExternalDocumentationObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Allows referencing an external resource for extended documentation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>HeadersObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Lists the headers that can be sent as part of a response.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>InfoObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The object provides metadata about the API. The metadata can be used by the clients if needed, and can be presented in the Swagger-UI for convenience.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ItemsObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A limited subset of JSON-Schema&apos;s items object. It is used by parameter definitions that are not located in &quot;body&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LicenseObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">License information for the exposed API.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>OperationObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Describes a single API operation on a path.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ParameterObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Describes a single operation parameter. A unique parameter is defined by a combination of a name and location.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ParametersDefinitionsObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An object to hold parameters to be reused across operations. Parameter definitions can be referenced to the ones defined here. This does not define global operation parameters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PathItemObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Describes the operations available on a single path. A Path Item may be empty, due to ACL constraints. The path itself is still exposed to the documentation viewer but they will not know which operations and parameters are available.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PathsObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Holds the relative paths to the individual endpoints. The path is appended to the basePath in order to construct the full URL. The Paths may be empty, due to ACL constraints (see: https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md#securityFiltering ).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ReferenceObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A simple object to allow referencing other definitions in the specification. It can be used to reference parameters and responses that are defined at the top level for reuse. The Reference Object is a JSON Reference that uses a JSON Pointer as its value. For this specification, only canonical dereferencing is supported.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ResponseObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Describes a single response from an API Operation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ResponsesDefinitionsObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An object to hold responses to be reused across operations. Response definitions can be referenced to the ones defined here. This does not define global operation responses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ResponsesObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A container for the expected responses of an operation. The container maps a HTTP response code to the expected response. It is not expected from the documentation to necessarily cover all possible HTTP response codes, since they may not be known in advance. However, it is expected from the documentation to cover a successful operation response and any known errors.
+
+The default can be used a default response object for all HTTP codes that are not covered individually by the specification.
+
+The Responses Object MUST contain at least one response code, and it SHOULD be the response for a successful operation call.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SchemaObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The Schema Object allows the definition of input and output data types. These types can be objects, but also primitives and arrays. This object is based on the JSON Schema Specification Draft 4 and uses a predefined subset of it. On top of this subset, there are extensions provided by this specification to allow for more complete documentation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ScopesObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Lists the available scopes for an OAuth2 security scheme.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SecurityDefinitionsObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A declaration of the security schemes available to be used in the specification. This does not enforce the security schemes on the operations and only serves to provide the relevant details for each scheme.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SecurityRequirementObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Lists the required security schemes to execute this operation. The object can have multiple security schemes declared in it which are all required (that is, there is a logical AND between the schemes).
+
+The name used for each property MUST correspond to a security scheme declared in the Security Definitions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SecuritySchemeObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Allows the definition of a security scheme that can be used by the operations. Supported schemes are basic authentication, an API key (either as a header or as a query parameter) and OAuth2&apos;s common flows (implicit, password, application and access code).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SwaggerObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">This is the object for the API specification. It combines what previously was the Resource Listing and API Declaration (version 1.2 and earlier) together into one document.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TagObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Allows adding meta data to a single tag that is used by the Operation Object. It is not mandatory to have a Tag Object per tag used there.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>XmlName</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Replaces the name of the element/attribute used for the described schema property. When defined within the Items Object (&quot;items&quot;), it will affect the name of the individual XML elements within the list. When defined alongside &quot;type&quot; being &quot;array&quot; (outside the &quot;items&quot;), it will affect the wrapping element and only if &quot;wrapped&quot; is &quot;true&quot;. If &quot;wrapped&quot; is &quot;false&quot;, it will be ignored.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>XmlObject</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A metadata object that allows for more fine-tuned XML model definitions. When using arrays, XML element names are not inferred (for singular/plural forms) and the name property should be used to add that information. See examples for expected behavior.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>_headerName</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The {name} of the header.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>_operationType</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The type of operation. Possible values: get, put, post, delete, options, head, patch.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>_pathItemName</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. The relative URL for the API path. (e.g. &quot;/pets&quot;). This property is not explicitly available in Swagger 2.0 specs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>allowEmptyValue</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sets the ability to pass empty-valued parameters. This is valid only for either query or formData parameters and allows you to send a parameter with a name only or an empty value. Default value is false.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>attribute</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Declares whether the property definition translates to an attribute instead of an element. Default value is false.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>authorizationUrl</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. The authorization URL to be used for this flow. This SHOULD be in the form of a URL. Validity: oauth2 (&quot;implicit&quot;, &quot;accessCode&quot;).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>basePath</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The base path on which the API is served, which is relative to the host. If it is not included, the API is served directly under the host. The value MUST start with a leading slash (/). The basePath does not support path templating.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>collectionFormat</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Determines the format of the array if type array is used. Possible values are:
+csv - comma separated values foo,bar.
+ssv - space separated values foo bar.
+tsv - tab separated values foo\tbar.
+pipes - pipe separated values foo|bar.
+multi (for Parameter object but not for Items object) - corresponds to multiple parameter instances instead of multiple values for a single instance foo=bar&amp;foo=baz. This is valid only for parameters in &quot;query&quot; or &quot;formData&quot;.
+Default value is csv.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>consumes</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A list of MIME types the APIs can consume. For Swagger Object,  this is global to all APIs but can be overridden on specific API calls, such as in Operation Object. Value MUST be as described under Mime Types.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>contact</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The contact information for the exposed API.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>d_delete</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A definition of a DELETE operation on this path.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>d_get</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A definition of a GET operation on this path.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>d_head</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A definition of a HEAD operation on this path.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>d_options</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A definition of a OPTIONS operation on this path.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>d_patch</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A definition of a PATCH operation on this path.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>d_post</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A definition of a POST operation on this path.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>d_put</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A definition of a PUT operation on this path.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>d_responsesDefault</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The documentation of responses other than the ones declared for specific HTTP response codes. It can be used to cover undeclared responses. Reference Object can be used to link to a response that is defined at the Swagger Object&apos;s responses section.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>default</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Declares the value of the parameter that the server will use if none is provided, for example a &quot;count&quot; to control the number of results per page might default to 100 if not supplied by the client in the request. (Note: &quot;default&quot; has no meaning for required parameters.) See http://json-schema.org/latest/json-schema-validation.html#anchor101. Unlike JSON Schema this value MUST conform to the defined type for this parameter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>definitions</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An object to hold data types produced and consumed by operations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>deprecated</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Declares this operation to be deprecated. Usage of the declared operation should be refrained. Default value is false.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>discriminator</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Adds support for polymorphism. The discriminator is the schema property name that is used to differentiate between other schema that inherit this schema. The property name used MUST be defined at this schema and it MUST be in the required property list. When used, the value MUST be the name of this schema or any schema that inherits it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>enum</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">See http://json-schema.org/latest/json-schema-validation.html#anchor76.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>examples</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An example of the response message.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>exclusiveMaximum</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">See http://json-schema.org/latest/json-schema-validation.html#anchor17.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>exclusiveMinimum</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">See http://json-schema.org/latest/json-schema-validation.html#anchor21.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>externalDocs</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Additional external documentation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>flow</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. The flow used by the OAuth2 security scheme. Valid values are &quot;implicit&quot;, &quot;password&quot;, &quot;application&quot; or &quot;accessCode&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>format</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The extending format for the previously mentioned parameter type. See Data Type Formats for further details.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>headerType</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. The type of the object. The value MUST be one of &quot;string&quot;, &quot;number&quot;, &quot;integer&quot;, &quot;boolean&quot;, or &quot;array&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>headers</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A list of headers that are sent with the response.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>host</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The host (name or ip) serving the API. This MUST be the host only and does not include the scheme nor sub-paths. It MAY include a port. If the host is not included, the host serving the documentation is to be used (including the port). The host does not support path templating.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>in</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. 
+&quot;in&quot; for Parameter object contains the location of the parameter. Possible values are &quot;query&quot;, &quot;header&quot;, &quot;path&quot;, &quot;formData&quot; or &quot;body&quot;. 
+&quot;in&quot; for Security Scheme object is Required The location of the API key. Valid values are &quot;query&quot; or &quot;header&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>info</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. Provides metadata about the API. The metadata can be used by the clients if needed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>items</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required if type is &quot;array&quot;. Describes the type of items in the array.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>itemsType</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. The internal type of the array. The value MUST be one of &quot;string&quot;, &quot;number&quot;, &quot;integer&quot;, &quot;boolean&quot;, or &quot;array&quot;. Files and models are not allowed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>license</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The license information for the exposed API.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>maxItems</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">See http://json-schema.org/latest/json-schema-validation.html#anchor42.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>maxLength</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">See http://json-schema.org/latest/json-schema-validation.html#anchor26.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>maximum</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">See http://json-schema.org/latest/json-schema-validation.html#anchor17.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>minItems</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">See http://json-schema.org/latest/json-schema-validation.html#anchor45.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>minLength</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">See http://json-schema.org/latest/json-schema-validation.html#anchor29.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>minimum</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">See http://json-schema.org/latest/json-schema-validation.html#anchor21.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>multipleOf</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">See http://json-schema.org/latest/json-schema-validation.html#anchor14.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>name</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The identifying name of the contact person/organization/license/tag. For Tag/License/Security Scheme object, name is required. For Security Scheme object, the nami is valid if it is an apiKey.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>namespace</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The URL of the namespace definition. Value SHOULD be in the form of a URL.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>operationId</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Unique string used to identify the operation. The id MUST be unique among all operations described in the API. Tools and libraries MAY use the operationId to uniquely identify an operation, therefore, it is recommended to follow common programming naming conventions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>operationParameters</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A list of parameters that are applicable for all the operations described under this path. In case the parameters are already defined in PathItem, these parameters can be overridden at the operation level, but cannot be removed there. The list MUST NOT include duplicated parameters. A unique parameter is defined by a combination of a name and location. The list can use the Reference Object to link to parameters that are defined at the Swagger Object&apos;s parameters. There can be one &quot;body&quot; parameter at most.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>operationResponses</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. The list of possible responses as they are returned from executing this operation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>operationTags</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A list of tags for API documentation control. Tags can be used for logical grouping of operations by resources or any other qualifier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>parameterName</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. The name of the parameter. Parameter names are case sensitive.
+
+1. If &quot;in&quot; is &quot;path&quot;, the name field MUST correspond to the associated path segment from the path field in the Paths Object. See Path Templating for further information.
+
+2. For all other cases, the name corresponds to the parameter name used based on the &apos;in&apos; property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>parameters</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An object to hold parameters that can be used across operations. This property does not define global parameters for all operations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>path</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A relative path to an individual endpoint. The field name MUST begin with a slash. The path is appended to the basePath in order to construct the full URL. Path templating is allowed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>paths</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. The available paths and operations for the API.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>pattern</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">See http://json-schema.org/latest/json-schema-validation.html#anchor33.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>prefix</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The prefix to be used for the &quot;name&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>produces</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A list of MIME types the APIs can produce. In case of Swagger object, this is global to all APIs but can be overridden on specific API calls. In case of Operation object, This overrides the produces definition at the Swagger Object, an empty value MAY be used to clear the global definition.  Value MUST be as described under Mime Types (http://tools.ietf.org/html/rfc6838).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>readOnly</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Relevant only for Schema &quot;properties&quot; definitions. Declares the property as &quot;read only&quot;. This means that it MAY be sent as part of a response but MUST NOT be sent as part of the request. Properties marked as readOnly being true SHOULD NOT be in the required list of the defined schema. Default value is false.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>responses</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">An object to hold responses that can be used across operations. This property does not define global responses for all operations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>schema</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">For the Parameter object, schema is required when &apos;in&apos; field is &apos;body&apos;. Schema defines the type used for the body parameter.
+
+For the  Response object, schema is a definition of the response structure. It can be a primitive, an array or an object. If this field does not exist, it means no content is returned as part of the response. As an extension to the Schema Object, its root type value may also be &quot;file&quot;. This SHOULD be accompanied by a relevant produces mime-type.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>schemes</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The transfer protocol of the API (in case of Swagger object) or transfer protocol of the operation (in case of Operation object). Values MUST be from the list: &quot;http&quot;, &quot;https&quot;, &quot;ws&quot;, &quot;wss&quot;. If the schemes is not included, the default scheme to be used is the one used to access the Swagger definition itself. If the value defined in Operation object, the value overrides the Swagger Object schemes definition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>scopes</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. The available scopes for the OAuth2 security scheme.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>security</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A declaration of which security schemes are applied for the API as a whole ot a particular operation. The list of values describes alternative security schemes that can be used (that is, there is a logical OR between the security requirements). Individual operations can override this definition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>securityDefinitions</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Security scheme definitions that can be used across the specification.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>securityType</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. The type of the security scheme. Valid values are &quot;basic&quot;, &quot;apiKey&quot; or &quot;oauth2&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>summary</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A short summary of what the operation does. For maximum readability in the swagger-ui, this field SHOULD be less than 120 characters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>swagger</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. Specifies the Swagger Specification version being used. It can be used by the Swagger UI and other clients to interpret the API listing. The value MUST be &quot;2.0&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>tags</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A list of tags used by the specification with additional metadata. The order of the tags can be used to reflect on their order by the parsing tools. Not all tags that are used by the Operation Object must be declared. The tags that are not declared may be organized randomly or based on the tools&apos; logic. Each tag name in the list MUST be unique.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>termsOfService</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The Terms of Service for the API.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>tokenUrl</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. The token URL to be used for this flow. This SHOULD be in the form of a URL. Validity: oauth2 (&quot;password&quot;, &quot;application&quot;, &quot;accessCode&quot;).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>type</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. The type of the parameter. Since the parameter is not located at the request body, it is limited to simple types (that is, not an object). The value MUST be one of &quot;string&quot;, &quot;number&quot;, &quot;integer&quot;, &quot;boolean&quot;, &quot;array&quot; or &quot;file&quot;. If type is &quot;file&quot;, the consumes MUST be either &quot;multipart/form-data&quot;, &quot; application/x-www-form-urlencoded&quot; or both and the parameter MUST be in &quot;formData&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>uniqueItems</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">See http://json-schema.org/latest/json-schema-validation.html#anchor49.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>version</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required Provides the version of the application API (not to be confused with the specification version).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>wrapped</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">MAY be used only for an array definition. Signifies whether the array is wrapped (for example, &lt;books&gt;&lt;book/&gt;&lt;book/&gt;&lt;/books&gt;) or unwrapped (&lt;book/&gt;&lt;book/&gt;). Default value is false. The definition takes effect only when defined alongside &quot;type&quot; being &quot;array&quot; (outside the &quot;items&quot;).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>xml</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">This MAY be used only on properties schemas. It has no effect on root schemas. Adds Additional metadata to describe the XML representation format of this property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>j_$ref</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. The reference string.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.org/dc/terms/description</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A short description of the application/response/secutiry scheme/operation/parameter description. For Response, Tag and Info object, GFM syntax can be used for rich text representation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.org/dc/terms/title</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Required. The title of the application.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>schema:url</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The URL pointing to the contact/license/documentation information used for the API. MUST be in the format of a URL.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>skos:example</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A free-form property to include a an example of an instance for this schema.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>vcard:email</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The email address of the contact person/organization. MUST be in the format of an email address.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>hydra:required</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Determines whether this parameter is mandatory. If the parameter is in &quot;path&quot;, this property is required and its value MUST be true. Otherwise, the property MAY be included and its default value is false.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AnonymousIndividual nodeID="_:genid1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A list of tags used by the specification with additional metadata. The order of the tags can be used to reflect on their order by the parsing tools. Not all tags that are used by the Operation Object must be declared. The tags that are not declared may be organized randomly or based on the tools&apos; logic. Each tag name in the list MUST be unique.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
